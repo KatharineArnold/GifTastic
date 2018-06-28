@@ -11,3 +11,20 @@
     background-color: navy;
     color: whitesmoke;
 }
+
+
+#addAnimalButton:hover{
+    background-color: navy;
+    color: whitesmoke;
+
+}
+
+#addAnimalButton{
+    background-color:whitesmoke ;
+    color:navy ;
+}
+
+
+.animal-btn{
+    margin: 3px;
+}

@@ -30,7 +30,7 @@
 
 $(() => {
 
-    let topics = ["cat", "dog", "bear", "raccoon", "gorilla"];
+    let topics = ["giraffe", "opossum", "donkey", "raccoon", "llama"];
 
     function renderButtons() {
         $(".buttons").empty();
@@ -39,7 +39,7 @@ $(() => {
             // create buttons here
             let animalButton = $("<button>");
             // Adding a class 
-            animalButton.addClass("animal-btn");
+            animalButton.addClass("animal-btn btn btn-primary");
             // Adding a data-attribute
             animalButton.attr("animalName", topics[i]);
             // button text
@@ -58,6 +58,10 @@ $(() => {
     $("#addAnimalButton").on("click", function (event) {
 
         event.preventDefault();
+        // if add animal input empty
+        if ($("#addAnimalInput").val() === ""){
+            return;
+        } else {
         // grab input from textbox
         let newAnimal = $("#addAnimalInput").val().trim();
         $("#addAnimalInput").val('');
@@ -67,10 +71,10 @@ $(() => {
 
 
         renderButtons();
+        }
     });
 
-    //   // Adding a click event listener to all buttons
-    //   $(document).on("click", ".animal-btn", displaySearchResults);
+  
 
 
     //   function to diplay results
@@ -137,17 +141,7 @@ $(() => {
 
 
 
-    // // pause and play gif
-    // $(".gifImg").on("click", function () {
-    //     let state = $(this).attr("data-state");
-    //     if (state === "still") {
-    //         $(this).attr("src", $(this).attr("data-animate"));
-    //         $(this).attr("data-state", "animate");
-    //     } else {
-    //         $(this).attr("src", $(this).attr("data-still"));
-    //         $(this).attr("data-state", "still");
-    //     }
-    // });
+ 
 
 
 });
